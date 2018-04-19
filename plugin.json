@@ -1,6 +1,6 @@
 {
-	"id": "nodebb-plugin-quickstart",
-	"url": "https://github.com/NodeBB/nodebb-plugin-quickstart",
+	"id": "nodebb-plugin-battlelogger",
+	"url": "https://github.com/NodeBB/nodebb-plugin-battlelogger",
 	"library": "./library.js",
 	"hooks": [
 		{
@@ -8,19 +8,29 @@
 		},
 		{
 			"hook": "filter:admin.header.build", "method": "addAdminNavigation"
+		},
+		{
+			"hook": "filter:navigation.available", "method": "addNavigation"
+		},
+		{
+			"hook": "filter:user.create", "method": "insertBattleCount"
 		}
 	],
 	"staticDirs": {
 		"static": "./static"
 	},
 	"less": [
-		"static/style.less"
+		"static/less/style.less"
 	],
 	"scripts": [
-		"static/lib/main.js"
+		"static/src/client/main.js",
+		"static/src/client/battlelogger.js"
 	],
 	"acpScripts": [
-		"static/lib/admin.js"
+		"static/src/client/admin.js"
 	],
-	"templates": "static/templates"
+	"templates": "static/templates",
+	"modules": {
+        "chart.js": "static/src/vendor/Chart.min.js"
+    }
 }

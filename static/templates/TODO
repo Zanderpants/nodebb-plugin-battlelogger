@@ -1,0 +1,14 @@
+Move CSS out to less file
+Clean up and match "theme"
+What to do with admin panel?
+Add functionailty for adding to db and updating graphs etc
+Fix not updating on item select (only reload seems to refresh content - but not in other parts of the product)
+Add battle lists view
+Add leaderboard panel
+Add summary (totals) panel
+Add remove UI
+Game by game options
+Make language pack for text
+
+
+
